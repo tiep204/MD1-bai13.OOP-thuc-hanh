@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="thuchanh2.js"></script>
+</head>
+<style>
+    canvas{
+        margin-left: 250px;
+        margin-top: 50px;
+    }
+</style>
+<body>
+<canvas id="myCanvas" width="800" height="500" style="border: 1px solid black"></canvas>
+<script>
+    let canvas = document.getElementById('myCanvas');
+
+    let ctx = canvas.getContext('2d');
+
+    //ve hinh tron
+    ctx.beginPath();
+    ctx.strokeStyle = 'red'
+    ctx.fillStyle = 'red'
+    ctx.arc(400, 250, 100, 0, 2 * Math.PI, true)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+
+    let cv = new circle(20, "blue")
+    console.log(cv)
+    let dienTich =cv.getArea()
+    console.log(dienTich)
+
+
+
+
+</script>
+</body>
+</html>
